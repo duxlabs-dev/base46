@@ -55,7 +55,7 @@
 ---@field folder_bg string
 
 local M = {
-  -- integration with DankMaterialShell
+  -- integration with dux-shell
   _DMS_SUPPORT = true,
 
   opts = {

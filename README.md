@@ -11,7 +11,7 @@
 Install with your favourite plugin manager, and call `require("base46").setup` with your preferred options. Example with `lazy.nvim`:
 ```lua
 {
-  "AvengeMedia/base46",
+  "duxlabs-dev/base46",
   lazy = true,
   opts = {},
 }
@@ -258,7 +258,7 @@ require("base46").load("foo")
 <details>
 <summary>Quickly generate a theme based on a builtin one</summary>
 
-This plugin was created for integration with [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell), which generates its UI from a single primary color. Following the example below, you can take any of the builtin themes and shift the hues of its colors towards that of a primary color, and get a new theme that will better align with your shell's UI. Here, we take `"nord"` as a base, shift it towards the pure red color `"#ff0000"` and set its background to a warm black `"#120e03"`.
+This plugin was created for integration with [dux-shell](https://github.com/duxlabs-dev/dux-shell), which generates its UI from a single primary color. Following the example below, you can take any of the builtin themes and shift the hues of its colors towards that of a primary color, and get a new theme that will better align with your shell's UI. Here, we take `"nord"` as a base, shift it towards the pure red color `"#ff0000"` and set its background to a warm black `"#120e03"`.
 
 ```lua
 ---colors/nord-red.lua
@@ -291,9 +291,9 @@ return require("lualine.themes._base46")("nord-red")
 
 ## Matugen integration
 
-Skip this if you want the full integration with DankMaterialShell.
+Skip this if you want the full integration with dux-shell.
 
-It is possible to automate the generation of a scheme, with hot reload, using [matugen](https://github.com/InioX/matugen). Copy the contents of [`matugen/`](https://github.com/AvengeMedia/base46/tree/v3.0/matugen) into your `~/.config/matugen/` and add the following to your `~/.config/matugen/config.toml` file:
+It is possible to automate the generation of a scheme, with hot reload, using [matugen](https://github.com/InioX/matugen). Copy the contents of [`matugen/`](https://github.com/duxlabs-dev/base46/tree/v3.0/matugen) into your `~/.config/matugen/` and add the following to your `~/.config/matugen/config.toml` file:
 ```toml
 [templates.neovim-colors]
 input_path = '~/.config/matugen/neovim-colors.lua'
@@ -307,13 +307,13 @@ Then, run `matugen` as you usually do, open neovim, run
 ```vim
 colorscheme base46-matugen
 ```
-and enjoy! You may modify `~/.config/matugen/neovim-colors.lua` to change the NvChad theme used as a base (`github_light`/`github_dark` by default, see the available list [here](https://nvchad.com/themes/) and their corresponding codes in the file names [here](https://github.com/AvengeMedia/base46/tree/v3.0/lua/base46/themes)) and the amount of tint you want on its colors (harmony = 0.5 by default).
+and enjoy! You may modify `~/.config/matugen/neovim-colors.lua` to change the NvChad theme used as a base (`github_light`/`github_dark` by default, see the available list [here](https://nvchad.com/themes/) and their corresponding codes in the file names [here](https://github.com/duxlabs-dev/base46/tree/v3.0/lua/base46/themes)) and the amount of tint you want on its colors (harmony = 0.5 by default).
 
 ## DMS integration
 
 https://github.com/user-attachments/assets/c050ff11-0a4a-47ce-85f8-a598854e8c2c
 
-On top of the many builtin themes of this plugin, [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) users have access to a matugen template that generates a colorscheme `dms` that is automatically updated with their DMS theme. You can choose the base schemes for dark and light mode, as well as the "harmony" for each (i.e. the amount by which the original themes is tinted towards the DMS theme source color).
+On top of the many builtin themes of this plugin, [dux-shell](https://github.com/duxlabs-dev/dux-shell) users have access to a matugen template that generates a colorscheme `dms` that is automatically updated with their DMS theme. You can choose the base schemes for dark and light mode, as well as the "harmony" for each (i.e. the amount by which the original themes is tinted towards the DMS theme source color).
 
 After enabling the integration in the settings and running DMS matugen templates, you can just open neovim and run
 ```vim
