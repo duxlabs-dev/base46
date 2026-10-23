@@ -3,6 +3,7 @@ return function(theme)
   local theme_table =
     assert(b46.theme_tables[theme] or b46.get_builtin_theme(theme), "Theme '" .. theme .. "' not found.")
   local colors = theme_table.base_30
+  colors.statusline_bg = b46.opts.transparency and "NONE" or colors.statusline_bg
   return {
     normal = {
       a = { bg = colors.blue, fg = colors.black, gui = "bold" },
